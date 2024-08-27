@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Concatenate Strings</title>
+    <style>
+        textarea {
+            width: 100%;
+            resize: vertical;
+            /* Allows resizing only vertically */
+            overflow: hidden;
+            /* Prevents scroll bars from appearing initially */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Concatenate Three Strings</h1>
+    <form method="POST">
+        <label for="input1">Input 1:</label>
+        <input type="text" id="input1" name="input1" required><br><br>
+
+        <label for="input2">Input 2:</label>
+        <input type="text" id="input2" name="input2" required><br><br>
+
+        <label for="input3">Input 3:</label>
+        <input type="text" id="input3" name="input3" required><br><br>
+
+        <button type="submit">Concatenate</button>
+    </form>
+
+    <h2>Result:</h2>
+    <textarea readonly rows="2" id="output">{{ result }}</textarea><br><br>
+
+    <script>
+        // Adjust the size of the textarea based on content
+        const textarea = document.getElementById('output');
+        textarea.style.height = 'auto'; // Reset height
+        textarea.style.height = (textarea.scrollHeight) + 'px'; // Set to scrollHeight
+    </script>
+</body>
+
+</html>
